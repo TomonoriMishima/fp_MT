@@ -11,6 +11,6 @@ with open ('log02.csv','r') as f:	#csvファイルの読み込み
 		if line[n][2] == '-':		#応答結果が'-'の場合
 			count = count +1		#countに1足す
 			if count >= N and line[n + 1][2] != '-':		#連続する'-'の数がN以上かつ、次の行の要素が'-'でないとき
-				print(line[n + 1- count ][0] + "~" + line[n][0])	#期間の表示
+				print(line[n + 1- count ][0] + "~" + line[n+1][0])	#期間の表示
 		else:			#応答結果が数字の場合
 			count = 0			#countの値をリセットする
